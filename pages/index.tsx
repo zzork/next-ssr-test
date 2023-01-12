@@ -23,9 +23,9 @@ export default function Home({ users }: { users: User[] }) {
           <>
             <thead><tr><th>Name</th><th>username</th><th>email</th></tr></thead>
             <tbody>
-            {users.map(({ name, username, email }) => 
-              <tr key={name}><td>{name}</td><td>{username}</td><td>{email}</td></tr>
-            )}
+              {users.map(({ name, username, email }) => 
+                <tr key={name}><td>{name}</td><td>{username}</td><td>{email}</td></tr>
+              )}
             </tbody>
           </>
         </table>
@@ -38,6 +38,5 @@ export default function Home({ users }: { users: User[] }) {
 export async function getServerSideProps() {
   const data = await fetch('https://jsonplaceholder.typicode.com/users');
   const json = await data.json();
-  console.log(json)
   return { props: { users: json } };
 }

@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'next-ssr-test'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8CCFD5D0EA0F4EBD8685D497456A55F3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE701B2C8B1A4F99A2BB8E3C76F8DFDC }}
           package: .
